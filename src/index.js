@@ -89,7 +89,22 @@ $(function () {
 		{
 			name:'第一组',
 			num: 10,
-			group:[]
+			group:[
+                {"name": "Jack Liu", "path": "Jack Liu.jpg"},
+				{"name": "Jam Wang", "path": "Jam Wang.jpg"},
+				{"name": "Irene Guo","path": "Irene Guo.jpg"},
+                {"name": "Ingrid Wong", "path": "Ingrid Wong.jpg"},
+                {"name": "X H Li", "path": "X H Li.jpg"},{
+                    "name": "Mengke Bateer",
+                    "path": "Mengke Bateer.jpg"
+                },{
+                    "name": "Tessi",
+                    "path": "Tessi.JPG"
+                },{
+                    "name": "Sisley Zhang",
+                    "path": "Sisley Zhang.jpg"
+                }
+            ]
 		},
 		{
 			name:'第二组',
