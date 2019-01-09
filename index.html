@@ -20,9 +20,19 @@
 <link rel="preload" href="./src/photos/John.JPG" as="image">
 <link rel="preload" href="./src/photos/Tessi.JPG" as="image">
 <body>
-
     <div class="main" id="mode0">
-        <div class="button">开始分组</div>
+        <div id="screen">
+            <div class="screen-image" style="left: 10vw;top: 10vw;"></div>
+            <div class="screen-image" style="left: 19vw;top: 10vw;"></div>
+            <div class="screen-image" style="left: 28vw;top: 10vw;"></div>
+            <div class="screen-image" style="left: 19vw;top: 19vw;"></div>
+            <div class="screen-image" style="left: 28vw;top: 19vw;"></div>
+            <div class="screen-image" style="left: 37vw;top: 19vw;"></div>
+            <div class="screen-image" style="left: 10vw;top: 28vw;"></div>
+            <div class="screen-image" style="left: 19vw;top: 28vw;"></div>
+            <div class="screen-image" style="left: 28vw;top: 28vw;"></div>
+        </div>
+        <div class="button" style="position: absolute; right: 10vw; bottom: 7vw">开始分组</div>
     </div>
 
     <div class="main" id="mode1" style="display: none">
@@ -56,12 +66,32 @@
         </div>
     </div>
 
-
 <canvas id="Mycanvas"></canvas>
 <script src="./src/jquery.js"></script>
 <script src="./src/swiper.min.js"></script>
 <script src="./src/photo.js"></script>
 <script src="./src/index.js"></script>
+
+    <script>;
+        var AllPhotos = restirct.concat(photos);
+
+	    $('.screen-image').each(function () {
+		    drawPhoto(this);
+        });
+
+	    function drawPhoto(el) {
+		    var index = Math.floor(Math.random() * AllPhotos.length);
+		    if($('.screen-image[data-name="' + encodeURI(AllPhotos[index].name) +'"]').length > 0) {
+			    drawPhoto(el);
+			    return
+            }
+		    $(el).attr('data-name', encodeURI(AllPhotos[index].name));
+		    $(el).css('background-image', encodeURI('url(./src/photos/' + AllPhotos[index].path + ')'))
+		    if(AllPhotos[index].position) {
+			    $(el).css('background-position-y', '-50px')
+		    }
+	    }
+    </script>
 <script src="./src/js/chroma.min.js"></script>
 <script src="./src/js/dat.gui.min.js"></script>
 
@@ -75,7 +105,7 @@
 	var context = canvas.getContext('2d');
 	context.strokeStyle = 'rgba(0,0,0,0.02)',
 		context.strokeWidth = 1,
-		context.fillStyle = 'rgba(0,0,0,0.05)';
+		context.fillStyle = 'rgba(0,222,255,0.35)';
 	var circleArr = [];
 
 	//线条：开始xy坐标，结束xy坐标，线条透明度
@@ -141,7 +171,7 @@
 						B = Math.abs(circleArr[i+j].y - circleArr[i].y);
 					var lineLength = Math.sqrt(A*A + B*B);
 					var C = 1/lineLength*7-0.009;
-					var lineOpacity = C > 0.03 ? 0.03 : C;
+					var lineOpacity = C > 0.53 ? 0.53 : C;
 					if (lineOpacity > 0) {
 						drawLine(context, circleArr[i].x, circleArr[i].y, circleArr[i+j].x, circleArr[i+j].y, lineOpacity);
 					}

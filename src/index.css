@@ -8,15 +8,31 @@ body {
     width: 100vw;
     font-family: 'Microsoft YaHei';
     color: #999;
+    overflow: hidden;
 }
-
-canvas {
+video {
     position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1;
+}
+canvas, #screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.screen-image {
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+    border: 2px solid #fff;
+    background-size: cover;
 }
 
 .main {
@@ -26,10 +42,6 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#mode0 {
-    position: relative;
 }
 
 .button {

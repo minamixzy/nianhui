@@ -33,8 +33,9 @@ $(function () {
 			var html = '';
 
 			item.group.forEach((man, manIndex)=>{
+				var position = man.position || '';
 				html += `<div class="photo-box">
-                    <div class="photo-image" style="background-image: url('./src/photos/${man.path}')" ></div>
+                    <div class="photo-image" style="background-image: url('./src/photos/${man.path}'); ${position}" ></div>
                     <div>${man.name}</div>
                 </div>`
 			});
@@ -98,7 +99,7 @@ $(function () {
                     "name": "Mengke Bateer",
                     "path": "Mengke Bateer.jpg"
                 },{
-                    "name": "Tessi",
+                    "name": "Tessi Lu",
                     "path": "Tessi.JPG"
                 },{
                     "name": "Sisley Zhang",

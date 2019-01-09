@@ -1,41 +1,65 @@
 var photos = [{"name": "Alex Zhu", "path": "Alex Zhu.jpg"}, {
 	"name": "Ashely Huang",
 	"path": "Ashely Huang.jpg"
-}, {"name": "Bill", "path": "Bill.JPG"}, {"name": "carrie", "path": "carrie.jpg"}, {
-	"name": "charles",
+}, {"name": "Bill Xiao", "path": "Bill.JPG"}, {"name": "Carrie Zhang", "path": "carrie.jpg"}, {
+	"name": "Charles Lu",
 	"path": "charles.jpg"
-}, {"name": "cyan", "path": "cyan.jpg"}, {"name": "denis", "path": "denis.jpg"}, {
-	"name": "eric",
+}, {"name": "Cyan", "path": "cyan.jpg"}, {"name": "Denis Zhu", "path": "denis.jpg"}, {
+	"name": "Eric Wang",
 	"path": "eric.jpg"
-}, {"name": "Flynn", "path": "Flynn.JPG"}, {"name": "Gary", "path": "Gary.JPG"}, {
+}, {"name": "Flynn Yang", "path": "Flynn.JPG"}, {"name": "Gary", "path": "Gary.JPG"}, {
 	"name": "Hope Hou",
 	"path": "Hope Hou.jpg"
-}, {"name": "ida", "path": "ida.jpg"},   {
-	"name": "John",
+}, {"name": "Ida Li", "path": "ida.jpg"}, {
+	"name": "John Zhang",
 	"path": "John.JPG"
-}, {"name": "Jojo Li", "path": "Jojo Li.jpg"}, {"name": "jonzzs", "path": "jonzzs.jpg"}, {
-	"name": "june",
+}, {"name": "Jojo Li", "path": "Jojo Li.jpg"}, {"name": "Jonzzs", "path": "jonzzs.jpg"}, {
+	"name": "June Jiao",
 	"path": "june.jpg"
-}, {"name": "Justin Zhang", "path": "Justin Zhang.jpg"}, {"name": "Kid", "path": "Kid.JPG"}, {
-	"name": "liam",
+}, {"name": "Justin Zhang", "path": "Justin Zhang.jpg"}, {"name": "Kid Bian", "path": "Kid.JPG"}, {
+	"name": "Liam Zuo",
 	"path": "liam.jpg"
-}, {"name": "lip", "path": "lip.jpg"}, {"name": "Lucky", "path": "Lucky.JPG"}, {
+}, {"name": "Lip Gu", "path": "lip.jpg"}, {"name": "Lucky", "path": "Lucky.JPG"}, {
 	"name": "Lucy Lin",
 	"path": "Lucy Lin.jpg"
-}, {"name": "lustre", "path": "lustre.jpg"}, {"name": "lynn", "path": "lynn.jpg"}, , {"name": "michael", "path": "michael.jpg"}, {
+}, {"name": "Lustre Xie", "path": "lustre.jpg"}, {"name": "Lynn", "path": "lynn.jpg"}, {
+	"name": "Michael Wang",
+	"path": "michael.jpg"
+}, {
 	"name": "Monty Zhang",
-	"path": "Monty Zhang.jpg"
+	"path": "Monty Zhang.jpg",
+	'position': 'background-position-y:-50px'
 }, {"name": "Morrin Wang", "path": "Morrin Wang.jpg"}, {
 	"name": "Nicole Tai",
 	"path": "Nicole Tai.jpg"
-}, {"name": "owen", "path": "owen.jpg"}, {"name": "panda", "path": "panda.jpg"}, {
-	"name": "peter",
+}, {"name": "Owen", "path": "owen.jpg"}, {"name": "Panda Yang", "path": "panda.jpg"}, {
+	"name": "Peter",
 	"path": "peter.jpg"
-}, {"name": "Rafael Li", "path": "Rafael Li.jpg"}, {"name": "stella", "path": "stella.jpg"}, {"name": "Steven Cai", "path": "Steven Cai.jpg"},
-	{"name": "Tina", "path": "Tina.JPG"}, {"name": "tony", "path": "tony.jpg"}, {
-	"name": "triste",
-	"path": "triste.jpg"
-}, {"name": "tulip", "path": "tulip.jpg"}, {"name": "tusu", "path": "tusu.jpg"}, {
-	"name": "wendy",
-	"path": "wendy.jpg"
-}, {"name": "Yogi", "path": "Yogi.jpg"}]
+}, {"name": "Rafael Li", "path": "Rafael Li.jpg"}, {"name": "Stella", "path": "stella.jpg"}, {
+	"name": "Steven Cai",
+	"path": "Steven Cai.jpg"
+},
+	{"name": "Tina", "path": "Tina.JPG"}, {"name": "Tony Xu", "path": "tony.jpg"}, {
+		"name": "Triste Zong",
+		"path": "triste.jpg"
+	}, {"name": "Tulip Chen", "path": "tulip.jpg"}, {"name": "Tusu", "path": "tusu.jpg"}, {
+		"name": "Wendy Yang",
+		"path": "wendy.jpg"
+	}, {"name": "Yogi Chen", "path": "Yogi.jpg"}]
+
+var restirct = [
+	{"name": "Jack Liu", "path": "Jack Liu.jpg"},
+	{"name": "Jam Wang", "path": "Jam Wang.jpg"},
+	{"name": "Irene Guo","path": "Irene Guo.jpg"},
+	{"name": "Ingrid Wong", "path": "Ingrid Wong.jpg"},
+	{"name": "X H Li", "path": "X H Li.jpg"},{
+		"name": "Mengke Bateer",
+		"path": "Mengke Bateer.jpg"
+	},{
+		"name": "Tessi Lu",
+		"path": "Tessi.JPG"
+	},{
+		"name": "Sisley Zhang",
+		"path": "Sisley Zhang.jpg"
+	}
+]
