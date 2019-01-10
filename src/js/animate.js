@@ -1,6 +1,8 @@
 (function () {
 
-    var table = restirct.concat(photos);;
+    var table = restirct.concat(photos).sort(function (a) {
+        return Math.random() > 0.5
+    });;
 
     var camera, scene, renderer;
     var controls;
@@ -20,21 +22,28 @@
 
         for ( var i = 0; i < table.length; i ++ ) {
 
+	        var elementParent = document.createElement( 'div' );
+	        elementParent.className = 'elementParent';
+	        elementParent.style.width = '310px';
+	        elementParent.style.height = '310px';
+	        elementParent.style.borderRadius = '50%';
+
             var element = document.createElement( 'div' );
             element.className = 'element';
-            element.style.width = '30vw';
-            element.style.height = '30vw';
+            element.style.width = '310px';
+            element.style.height = '310px';
             element.style.borderRadius = '50%';
             element.style.backgroundSize = 'cover';
+            element.style.backgroundPosition = 'center';
             element.style.backgroundImage = 'url(./src/photos/' + encodeURI(table[i].path) + ')';
             if(table[i].path === 'Monty Zhang.jpg'){
                 element.style.backgroundPositionY = '-50px';
             }
 
-            // var number = document.createElement( 'div' );
-            // number.className = 'number';
-            // number.textContent = (i/5) + 1;
-            // element.appendChild( number );
+
+	        elementParent.appendChild( element );
+
+
             //
             // var symbol = document.createElement( 'div' );
             // symbol.className = 'symbol';
@@ -46,7 +55,7 @@
             // details.innerHTML = table[ i + 1 ] + '<br>' + table[ i + 2 ];
             // element.appendChild( details );
 
-            var object = new THREE.CSS3DObject( element );
+            var object = new THREE.CSS3DObject( elementParent );
             object.position.x = Math.random() * 4000 - 2000;
             object.position.y = Math.random() * 4000 - 2000;
             object.position.z = Math.random() * 4000 - 2000;
@@ -110,9 +119,18 @@
 
             var object = new THREE.Object3D();
 
-            object.position.x = ( ( i % 5 ) * 400 ) - 800;
-            object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
-            object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 2000;
+            // object.position.x = ( ( i % 5 ) * 600 ) - 1200;
+            // object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 600 ) + 1200;
+            // object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 1000;
+            if(i === 37) {
+	            object.position.x = 0
+	            object.position.y = 0
+	            object.position.z = 2001
+            } else {
+	            object.position.x = Math.random() * 4000 - 2000;
+	            object.position.y = Math.random() * 4000 - 2000;
+	            object.position.z = Math.random() * 4000 - 2500;
+            }
 
             targets.grid.push( object );
 
@@ -133,51 +151,43 @@
         controls.maxDistance = 6000;
         controls.addEventListener( 'change', render );
 
-        // var button = document.getElementById( 'table' );
-        // button.addEventListener( 'click', function ( event ) {
-        //
-        //     transform( targets.table, 2000 );
-        //
-        // }, false );
-        //
-        // var button = document.getElementById( 'sphere' );
-        // button.addEventListener( 'click', function ( event ) {
-        //
-        //     transform( targets.sphere, 2000 );
-        //
-        // }, false );
-        //
-        // var button = document.getElementById( 'helix' );
-        // button.addEventListener( 'click', function ( event ) {
-        //
-        //     transform( targets.helix, 2000 );
-        //
-        // }, false );
-        //
-        // var button = document.getElementById( 'grid' );
-        // button.addEventListener( 'click', function ( event ) {
-        //
-        //     transform( targets.grid, 2000 );
-        //
-        // }, false );
+        window.xzywww = camera;
+
+        var currentZoonIndex = 37;
 
         transform( targets.sphere, 2000 );
 
         setTimeout(function () {
-            transform( targets.grid, 2000 );
+            transform( targets.grid, 2000, true);
+
+	        $('.element').removeClass('zoom');
+	        $('.elementParent').eq(currentZoonIndex % table.length).find('.element').addClass('zoom');
+	        currentZoonIndex++
+            setTimeout(changePerson, 4000)
         }, 4000)
 
 
-        // setInterval(function () {
-        //     changeFov();
-        // }, 4000)
+        function changePerson(){
+            setInterval(function () {
+                var end = targets.grid.splice(-1, 1);
+	            targets.grid.unshift(end[0]);
+	            for ( var i = 0; i < targets.grid.length; i ++ ) {
+		            if(i === currentZoonIndex % table.length) {
+			            targets.grid[i].position.x = 0
+			            targets.grid[i].position.y = 0
+			            targets.grid[i].position.z = 2001
+		            } else {
+			            targets.grid[i].position.x = Math.random() * 4000 - 2000;
+			            targets.grid[i].position.y = Math.random() * 4000 - 2000;
+			            targets.grid[i].position.z = Math.random() * 4000 - 2500;
+		            }
+	            }
 
-        function changeFov() {
-            targets.grid.forEach(function (item) {
-                item.position.z += 1000
-            });
-
-            transform(targets.grid, 2000)
+	            $('.element').removeClass('zoom');
+	            $('.elementParent').eq(currentZoonIndex % table.length).find('.element').addClass('zoom');
+	            currentZoonIndex++
+	            transform( targets.grid, 2000);
+            }, 5000)
         }
 
         //
@@ -186,32 +196,35 @@
 
     }
 
-    function transform( targets, duration ) {
+    function transform( targets, duration , needsZoom) {
         TWEEN.removeAll();
 
-        if(objects.length > 0) {
-            for ( var i = 0; i < objects.length; i ++ ) {
+        for ( var i = 0; i < objects.length; i ++ ) {
 
-                var object = objects[ i ];
-                var target = targets[ i ];
+            var object = objects[ i ];
+            var target = targets[ i ];
 
-                new TWEEN.Tween( object.position )
-                    .to( { x: target.position.x, y: target.position.y, z: target.position.z }, Math.random() * duration + duration )
-                    .easing( TWEEN.Easing.Exponential.InOut )
-                    .start();
+	        new TWEEN.Tween( object.position )
+                .to( { x: target.position.x, y: target.position.y, z: target.position.z }, 1 * duration + duration )
+                .easing( TWEEN.Easing.Exponential.InOut )
+                .start();
 
-                new TWEEN.Tween( object.rotation )
-                    .to( { x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, Math.random() * duration + duration )
-                    .easing( TWEEN.Easing.Exponential.InOut )
-                    .start();
-
-            }
+            new TWEEN.Tween( object.rotation )
+                .to( { x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, 1 * duration + duration )
+                .easing( TWEEN.Easing.Exponential.InOut )
+                .start();
         }
 
-        new TWEEN.Tween( this )
+	    if(needsZoom){
+		    new TWEEN.Tween( camera)
+			    .to( {fov:24}, duration)
+			    .start();
+        }
+
+        return new TWEEN.Tween( this )
             .to( {}, duration * 2 )
             .onUpdate( render )
-            .start();
+            .start()
 
     }
 

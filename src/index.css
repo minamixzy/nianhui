@@ -114,6 +114,7 @@ canvas{
     width: 10vw;
     height: 10vw;
     background-size: cover;
+    background-position: center;
 }
 
 .photo {
@@ -136,9 +137,10 @@ canvas{
 
 .photo-box:first-child:before {
     content: ' ';
-    width: 140px;
-    top: 26px;
-    height: 70px;
+    width: 90px;
+    top: 55px;
+    left: 90px;
+    height: 90px;
     position: absolute;
     background: url("./image/crown.png");
     background-size: cover;
@@ -155,6 +157,7 @@ canvas{
     color: #eee;
     margin-bottom: 20px;
     margin-top: 20px;
+    color: #15caff;
 }
 
 #result div {
@@ -165,3 +168,11 @@ canvas{
 .result-inner >div:first-child h2{
     margin-top: 0;
 }
+
+/*.zoom {
+    transform: scale(1.5);
+}
+
+.element {
+    transition: transform 2s 2s;
+}*/

@@ -6,11 +6,11 @@
 */
 
 .holderCircle{
-    width:80vh;
-    height:80vh;
     border-radius:100%;
     margin:10vh auto;
-    position:relative;
+    position:absolute;
+    right: 10vh;
+    bottom: -5vh;
 }
 
 /* .holderCircle::after{
@@ -258,8 +258,8 @@
 
 
 .contentCircle{
-    width: 30vh;
-    height: 30vh;
+    width: 10vh;
+    height: 10vh;
     border-radius: 100%;
     color: #fff;
     position: relative;
@@ -284,14 +284,14 @@
     transform: scale(0);
     transition: 0.5s;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 18px;
     width: 100%;
     height: 100%;
     top: 0;
     right: 0;
     margin: auto;
     background: #00000054;
-    line-height: 30vh;
+    line-height: 10vh;
     cursor: pointer;
 }
 
