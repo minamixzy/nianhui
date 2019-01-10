@@ -21,132 +21,131 @@
 <link rel="preload" href="./src/photos/John.JPG" as="image">
 <link rel="preload" href="./src/photos/Tessi.JPG" as="image">
 <body>
-    <div class="main" id="mode0">
-        <div id="screen">
-            <!--<div class="screen-image" style="left: 10vw;top: 10vw;"></div>
-            <div class="screen-image" style="left: 19vw;top: 10vw;"></div>
-            <div class="screen-image" style="left: 28vw;top: 10vw;"></div>
-            <div class="screen-image" style="left: 19vw;top: 19vw;"></div>
-            <div class="screen-image" style="left: 28vw;top: 19vw;"></div>
-            <div class="screen-image" style="left: 37vw;top: 19vw;"></div>
-            <div class="screen-image" style="left: 10vw;top: 28vw;"></div>
-            <div class="screen-image" style="left: 19vw;top: 28vw;"></div>
-            <div class="screen-image" style="left: 28vw;top: 28vw;"></div>-->
+<!-- 视频本届 -->
+<video src="./src/trim.mp4" autoplay loop style="position: fixed;top: 0;left: 0;z-index:-1; width: 100%;height: 100%;object-fit: cover"></video>
 
-            <div class="holderCircle">
+<div class="main" id="mode0">
+    <div id="screen">
+        <div style="position: absolute;width: 100%;height: 100%;" id="container"></div>
+        <div class="holderCircle" style="display: none">
 
-                <div class="dotCircle">
-		<span class="itemDot active itemDot1" data-tab="1">
-			<i class="fa fa-life-ring"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot2" data-tab="2">
-			<i class="fa fa-bomb"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot3" data-tab="3">
-			<i class="fa fa-heartbeat"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot4" data-tab="4">
-			<i class="fa fa-leaf"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot5" data-tab="5">
-			<i class="fa fa-magic"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot6" data-tab="6">
-			<i class="fa fa-pencil-square-o"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot7" data-tab="7">
-			<i class="fa fa-rss-square"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot8" data-tab="8">
-			<i class="fa fa-ship"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot9" data-tab="9">
-			<i class="fa fa-truck"></i>
-			<span class="forActive"></span>
-		</span>
-                    <span class="itemDot itemDot10" data-tab="10">
-			<i class="fa fa-pied-piper"></i>
-			<span class="forActive"></span>
-		</span>
+            <!--<div class="dotCircle">
+    <span class="itemDot active itemDot1" data-tab="1">
+        <i class="fa fa-life-ring"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot2" data-tab="2">
+        <i class="fa fa-bomb"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot3" data-tab="3">
+        <i class="fa fa-heartbeat"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot4" data-tab="4">
+        <i class="fa fa-leaf"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot5" data-tab="5">
+        <i class="fa fa-magic"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot6" data-tab="6">
+        <i class="fa fa-pencil-square-o"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot7" data-tab="7">
+        <i class="fa fa-rss-square"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot8" data-tab="8">
+        <i class="fa fa-ship"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot9" data-tab="9">
+        <i class="fa fa-truck"></i>
+        <span class="forActive"></span>
+    </span>
+                <span class="itemDot itemDot10" data-tab="10">
+        <i class="fa fa-pied-piper"></i>
+        <span class="forActive"></span>
+    </span>
+            </div>-->
+
+            <div class="contentCircle" >
+
+                <div class="CirItem active CirItem1">
+                    开始分组
                 </div>
-
-                <div class="contentCircle">
-
-                    <div class="CirItem active CirItem1">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem2">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem3">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem4">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem5">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem6">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem7">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem8">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem9">
-                        开始分组
-                    </div>
-                    <div class="CirItem CirItem10">
-                        开始分组
-                    </div>
+                <div class="CirItem CirItem2">
+                    开始分组
                 </div>
-
-            </div>
-        </div>
-        <!--<div class="button" style="position: absolute; right: 10vw; bottom: 7vw">开始分组</div>-->
-    </div>
-
-    <div class="main" id="mode1" style="display: none">
-        <img src="./src/image/loading.gif" alt="">
-    </div>
-
-    <div class="main" id="mode2" style="display: none">
-        <div class="button">分组完成，查看分组结果吧~</div>
-    </div>
-
-    <div class="main" id="mode3" style="display: none">
-        <div class="swiper-container" style="width: 100%;height: 100%;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="CirItem CirItem3">
+                    开始分组
                 </div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide">
-                    <div id="result">
-                        <div id="result-inner"></div>
-                    </div>
+                <div class="CirItem CirItem4">
+                    开始分组
+                </div>
+                <div class="CirItem CirItem5">
+                    开始分组
+                </div>
+                <div class="CirItem CirItem6">
+                    开始分组
+                </div>
+                <div class="CirItem CirItem7">
+                    开始分组
+                </div>
+                <div class="CirItem CirItem8">
+                    开始分组
+                </div>
+                <div class="CirItem CirItem9">
+                    开始分组
+                </div>
+                <div class="CirItem CirItem10">
+                    开始分组
                 </div>
             </div>
 
-            <!-- 如果需要导航按钮 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
         </div>
     </div>
+
+</div>
+
+<div class="main" id="mode1" style="display: none;flex-direction: column;">
+    <!-- svg loading-->
+    <svg width="40%" height="40%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-hud"><style type="text/css">.st0{opacity:0.8;fill:none;stroke-width:0.4811;stroke-miterlimit:10;}
+    .st2{opacity:0.8;}
+    .st3{fill:none;stroke-width:0.5;stroke-miterlimit:10;}
+    .st4{fill:none;stroke-width:0.4694;stroke-miterlimit:10;}</style><g style="opacity:0.5"><polygon ng-attr-stroke="{{config.c1}}" points="41.5,62 30,62 24.2,72 30,82 41.5,82 47.3,72   " class="st0" stroke="none"></polygon><polygon ng-attr-stroke="{{config.c1}}" points="58.8,72 47.3,72 41.5,82 47.3,92 58.8,92 64.6,82   " class="st0" stroke="none"></polygon><polygon ng-attr-stroke="{{config.c1}}" points="76.2,62 64.6,62 58.8,72 64.6,82 76.2,82 81.9,72   " class="st0" stroke="none"></polygon><polygon ng-attr-stroke="{{config.c1}}" points="41.5,42 30,42 24.2,52 30,62 41.5,62 47.3,52   " class="st0" stroke="none"></polygon><polygon ng-attr-stroke="{{config.c1}}" points="58.8,12 47.3,12 41.5,22 47.3,32 58.8,32 64.6,22   " class="st0" stroke="none"></polygon><polygon ng-attr-stroke="{{config.c1}}" points="58.8,32 47.3,32 41.5,42 47.3,52 58.8,52 64.6,42   " class="st0" stroke="none"></polygon><polygon ng-attr-stroke="{{config.c1}}" points="76.2,22 64.6,22 58.8,32 64.6,42 76.2,42 81.9,32   " class="st0" stroke="none"></polygon></g><g transform="rotate(40.4552 53.064 52)"><path ng-attr-fill="{{config.c2}}" d="M48.3,56.8l-4.4,1.5c-0.9-1.3-1.5-2.7-1.7-4.3l-1.9,0.3c0.5,2.6,1.7,5,3.6,6.9c1.9,1.9,4.3,3.1,6.9,3.6 l0.3-1.9c-1.6-0.3-3-0.9-4.3-1.7L48.3,56.8z" fill="#15caff"></path><path ng-attr-fill="{{config.c2}}" d="M57.8,47.2l4.4-1.5c0.9,1.3,1.5,2.7,1.7,4.3l1.9-0.3c-0.5-2.6-1.7-5-3.6-6.9c-1.9-1.9-4.3-3.1-6.9-3.6L55,41.1 c1.6,0.3,3,0.9,4.3,1.7L57.8,47.2z" fill="#15caff"></path><path ng-attr-fill="{{config.c2}}" d="M62.2,58.2l-4.4-1.5l1.5,4.4C58,62,56.5,62.6,55,62.9l0.3,1.9c2.6-0.5,5-1.7,6.9-3.6c1.9-1.9,3.1-4.3,3.6-6.9 L64,53.9C63.7,55.5,63.1,56.9,62.2,58.2z" fill="#15caff"></path><path ng-attr-fill="{{config.c2}}" d="M43.9,42.8c-1.9,1.9-3.1,4.3-3.6,6.9l1.9,0.3c0.3-1.6,0.9-3,1.7-4.3l4.4,1.5l-1.5-4.4c1.3-0.9,2.7-1.5,4.3-1.7 l-0.3-1.9C48.2,39.7,45.8,40.9,43.9,42.8z" fill="#15caff"></path><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 53.064 52;360 53.064 52" keyTimes="0;1" dur="4s" begin="0s" repeatCount="indefinite"></animateTransform></g><g class="st2" transform="rotate(279.09 53.064 52)"><path ng-attr-fill="{{config.c2}}" d="M36,61.9c-1.7-3-2.7-6.4-2.7-9.9c0-10.9,8.8-19.7,19.7-19.7v1c-10.3,0-18.8,8.4-18.8,18.8 c0,3.3,0.9,6.5,2.5,9.4L36,61.9z" fill="#15caff"></path><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="360 53.064 52;0 53.064 52" keyTimes="0;1" dur="2s" begin="0s" repeatCount="indefinite"></animateTransform></g><g class="st2" transform="rotate(124.73 53.064 52)"><path ng-attr-fill="{{config.c2}}" d="M57,75.3l-0.5-3c9.9-1.7,17.2-10.2,17.2-20.3c0-11.4-9.2-20.6-20.6-20.6S32.5,40.6,32.5,52 c0,1.6,0.2,3.2,0.5,4.7l-3,0.7c-0.4-1.8-0.6-3.6-0.6-5.4c0-13.1,10.6-23.7,23.7-23.7S76.7,38.9,76.7,52 C76.7,63.6,68.4,73.4,57,75.3z" fill="#15caff"></path><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 53.064 52;360 53.064 52" keyTimes="0;1" dur="1.332s" begin="0s" repeatCount="indefinite"></animateTransform></g><g transform="rotate(279.09 53.064 52)"><path ng-attr-fill="{{config.c2}}" d="M90.5,45.4c-1.5-8.8-6.2-16.8-13-22.5l0,0c-3.4-2.9-7.3-5.1-11.4-6.6s-8.5-2.3-13-2.3v2.4v1.4v2.4 c3.7,0,7.4,0.6,10.9,1.9l0.8-2.3c0,0,0,0,0,0c3.7,1.4,7.2,3.4,10.3,5.9l1.2-1.5L75,25.8c0,0,0,0,0,0l-1.5,1.8 c5.7,4.8,9.6,11.5,10.9,18.8l3.8-0.7c0,0,0,0,0,0L90.5,45.4z" fill="#15caff"></path><path ng-attr-fill="{{config.c2}}" d="M29.7,22l4.7,6.1c3.5-2.8,7.5-4.6,11.9-5.6l-1.7-7.5C39.2,16.2,34.2,18.5,29.7,22z" fill="#15caff"></path><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="360 53.064 52;0 53.064 52" keyTimes="0;1" dur="2s" begin="0s" repeatCount="indefinite"></animateTransform></g><g class="st2" transform="rotate(124.73 53.064 52)"><path ng-attr-fill="{{config.c2}}" d="M53.1,92.4v-1c21.8,0,39.5-17.7,39.5-39.5c0-21.8-17.7-39.5-39.5-39.5c-15.8,0-30,9.4-36.2,23.8L15.9,36 c6.4-14.8,21-24.4,37.1-24.4c22.3,0,40.4,18.1,40.4,40.4C93.5,74.3,75.3,92.4,53.1,92.4z" fill="#15caff"></path><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 53.064 52;360 53.064 52" keyTimes="0;1" dur="1.332s" begin="0s" repeatCount="indefinite"></animateTransform></g><polygon ng-attr-fill="{{config.c3}}" points="57.4,51.5 53.5,51.5 53.5,47.7 52.6,47.7 52.6,51.5 48.7,51.5 48.7,52.5 52.6,52.5 52.6,56.3 53.5,56.3 53.5,52.5 57.4,52.5 " fill="#d9534f"><animate attributeName="opacity" calcMode="linear" values="0;0;1;1;0" keyTimes="0;0.4;0.5;0.9;1" dur="1.332" begin="0s" repeatCount="indefinite"></animate></polygon><g transform="rotate(319.545 53.064 52)"><path ng-attr-fill="{{config.c2}}" d="M39.7,28.5l0.6,1c3.9-2.2,8.3-3.4,12.8-3.4V25C48.4,25,43.7,26.2,39.7,28.5z" fill="#15caff"></path><path ng-attr-fill="{{config.c2}}" d="M28.6,60.6l-1.1,0.4C31.3,71.8,41.6,79,53.1,79v-1.2C42.1,77.9,32.3,70.9,28.6,60.6z" fill="#15caff"></path><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="360 53.064 52;0 53.064 52" keyTimes="0;1" dur="4s" begin="0s" repeatCount="indefinite"></animateTransform></g><g><polyline ng-attr-stroke="{{config.c4}}" points="35.5,77.5 27.5,89.5 24,89.5   " class="st3" stroke="#39ff39"></polyline><rect ng-attr-stroke="{{config.c4}}" x="7" y="86" width="17" height="7" class="st4" stroke="#39ff39"></rect></g><g><polyline ng-attr-stroke="{{config.c4}}" points="59,22 69,12 82,12   " class="st4" stroke="#39ff39"></polyline><circle ng-attr-stroke="{{config.c4}}" cx="87" cy="12" r="5" class="st4" stroke="#39ff39"></circle></g></svg>
+
+    <div style="color: #15caff; font-size: 60px;margin-top: 20px;margin-left: 10px;">loading...</div>
+</div>
+
+<div class="main" id="mode2" style="display: none">
+    <div class="button">分组完成，查看分组结果吧~</div>
+</div>
+
+<div class="main" id="mode3" style="display: none">
+    <div class="swiper-container" style="width: 100%;height: 100%;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide">
+                <div id="result">
+                    <div id="result-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+</div>
 
 <canvas id="Mycanvas"></canvas>
 <script src="./src/jquery.js"></script>
@@ -154,28 +153,43 @@
 <script src="./src/photo.js"></script>
 <script src="./src/index.js"></script>
 <script src="./src/circle.js"></script>
+<script src="./src/js/three.min.js"></script>
+<script src="./src/js/tween.min.js"></script>
+<script src="./src/js/TrackballControls.js"></script>
+<script src="./src/js/CSS3DRenderer.js"></script>
+<script src="./src/js/animate.js"></script>
 
 <script>;
-        var AllPhotos = restirct.concat(photos);
+(function () {
 
-	    $('.itemDot').each(function () {
-		    drawPhoto(this);
-        });
+    var bodyWidth = document.body.clientWidth
+    $('.photo-gallary-transform').each(function (index) {
+        $(this).css('width', 0.34 * bodyWidth + 'px');
+        $(this).css('transform', 'rotateY('+ (60 - 30 * index) + 'deg) translateZ(-' + (3.73 * 0.17 * bodyWidth)+ 'px)');
+    });
 
-	    function drawPhoto(el) {
-		    var index = Math.floor(Math.random() * AllPhotos.length);
-		    if($('.itemDot[data-name="' + encodeURI(AllPhotos[index].name) +'"]').length > 0) {
-			    drawPhoto(el);
-			    return
-            }
-		    $(el).attr('data-name', encodeURI(AllPhotos[index].name));
-		    $(el).css('background-image', encodeURI('url(./src/photos/' + AllPhotos[index].path + ')'))
-		    if(AllPhotos[index].position) {
-			    $(el).css('background-position-y', '-50px')
-		    }
-	    }
-    </script>
-<script src="./src/js/chroma.min.js"></script>
+    var AllPhotos = restirct.concat(photos);
+
+    $('.photo-gallary-inner').each(function () {
+        drawPhoto(this);
+    });
+
+    function drawPhoto(el) {
+        var index = Math.floor(Math.random() * AllPhotos.length);
+        if ($('.photo-gallary-inner[data-name="' + encodeURI(AllPhotos[index].name) + '"]').length > 0) {
+            drawPhoto(el);
+            return
+        }
+        $(el).attr('data-name', encodeURI(AllPhotos[index].name));
+        $(el).html('<svg><image src="./src/photos/' +  + AllPhotos[index].path+'" alt=""></svg>')
+        //$(el).css('background-image', encodeURI('url(./src/photos/' + AllPhotos[index].path + ')'))
+        if (AllPhotos[index].position) {
+            $(el).css('background-position-y', '-50px')
+        }
+    }
+})()
+</script>
+<!--<script src="./src/js/chroma.min.js"></script>
 <script src="./src/js/dat.gui.min.js"></script>
 
 <script>
@@ -280,6 +294,6 @@
 			draw();
 		}, 16);
 	}
-</script>
+</script>-->
 </body>
 </html>

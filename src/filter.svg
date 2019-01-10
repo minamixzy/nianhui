@@ -1,0 +1,5 @@
+<filter id="oil-painting">
+    <feMorphology radius="2" in="SourceGraphic" result="result0" />
+    <feTurbulence numOctaves="1" baseFrequency="0.078" result="result91" />
+    <feDisplacementMap in2="result91" in="result0" scale="6.3" xChannelSelector="R" yChannelSelector="G" />
+</filter>

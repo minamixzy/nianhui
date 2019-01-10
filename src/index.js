@@ -1,4 +1,22 @@
 $(function () {
+    // var AllPhotos = restirct.concat(photos);
+    // $('#screen-slider .swiper-slide').each(function (index) {
+    //     $(this).css('background-image', encodeURI('url(./src/photos/' + AllPhotos[index].path + ')'))
+    // })
+    // //mode0 轮播图
+    // var swiper = new Swiper('.screen-slider', {
+    //     loop : true,
+    //     effect: 'coverflow',
+    //     centeredSlides: true,
+    //     slidesPerView: 'auto',
+    //     coverflow: {
+    //         rotate:30,// 旋转的角度
+    //         stretch: 1000,// 拉伸   图片间左右的间距和密集度
+    //         depth: 5000,// 深度   切换图片间上下的间距和密集度
+    //         modifier: 30,// 修正值 该值越大前面的效果越明显
+    //         slideShadows : false// 页面阴影效果
+    //     }
+    // });
 
 	//点击开始抽奖
 	$('#mode0 .contentCircle').on('click', function () {
@@ -40,7 +58,7 @@ $(function () {
                 </div>`
 			});
 
-			$('.swiper-slide').eq(index).html(`
+			$('#mode3 .swiper-slide').eq(index).html(`
 			<div class="button group-button">${item.name}</div>
             <div class="photo">
                 ${html}
@@ -92,7 +110,6 @@ $(function () {
 			num: 10,
 			group:[
                 {"name": "Jack Liu", "path": "Jack Liu.jpg"},
-				{"name": "Jam Wang", "path": "Jam Wang.jpg"},
 				{"name": "Irene Guo","path": "Irene Guo.jpg"},
                 {"name": "Ingrid Wong", "path": "Ingrid Wong.jpg"},
                 {"name": "X H Li", "path": "X H Li.jpg"},{
@@ -114,7 +131,7 @@ $(function () {
 		},
 		{
 			name:'第三组',
-			num: 10,
+			num: 9,
 			group:[]
 		},
 		{
