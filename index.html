@@ -6,6 +6,7 @@
 </head>
 <link rel="stylesheet" href="./src/index.css">
 <link rel="stylesheet" href="./src/swiper.min.css">
+<link rel="stylesheet" href="./src/circle.css">
 <link rel="preload" href="./src/photos/Yogi.jpg" as="image">
 <link rel="preload" href="./src/photos/Bill.JPG" as="image">
 <link rel="preload" href="./src/photos/Flynn.JPG" as="image">
@@ -22,7 +23,7 @@
 <body>
     <div class="main" id="mode0">
         <div id="screen">
-            <div class="screen-image" style="left: 10vw;top: 10vw;"></div>
+            <!--<div class="screen-image" style="left: 10vw;top: 10vw;"></div>
             <div class="screen-image" style="left: 19vw;top: 10vw;"></div>
             <div class="screen-image" style="left: 28vw;top: 10vw;"></div>
             <div class="screen-image" style="left: 19vw;top: 19vw;"></div>
@@ -30,9 +31,90 @@
             <div class="screen-image" style="left: 37vw;top: 19vw;"></div>
             <div class="screen-image" style="left: 10vw;top: 28vw;"></div>
             <div class="screen-image" style="left: 19vw;top: 28vw;"></div>
-            <div class="screen-image" style="left: 28vw;top: 28vw;"></div>
+            <div class="screen-image" style="left: 28vw;top: 28vw;"></div>-->
+
+            <div class="holderCircle">
+
+                <div class="dotCircle">
+		<span class="itemDot active itemDot1" data-tab="1">
+			<i class="fa fa-life-ring"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot2" data-tab="2">
+			<i class="fa fa-bomb"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot3" data-tab="3">
+			<i class="fa fa-heartbeat"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot4" data-tab="4">
+			<i class="fa fa-leaf"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot5" data-tab="5">
+			<i class="fa fa-magic"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot6" data-tab="6">
+			<i class="fa fa-pencil-square-o"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot7" data-tab="7">
+			<i class="fa fa-rss-square"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot8" data-tab="8">
+			<i class="fa fa-ship"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot9" data-tab="9">
+			<i class="fa fa-truck"></i>
+			<span class="forActive"></span>
+		</span>
+                    <span class="itemDot itemDot10" data-tab="10">
+			<i class="fa fa-pied-piper"></i>
+			<span class="forActive"></span>
+		</span>
+                </div>
+
+                <div class="contentCircle">
+
+                    <div class="CirItem active CirItem1">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem2">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem3">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem4">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem5">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem6">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem7">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem8">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem9">
+                        开始分组
+                    </div>
+                    <div class="CirItem CirItem10">
+                        开始分组
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="button" style="position: absolute; right: 10vw; bottom: 7vw">开始分组</div>
+        <!--<div class="button" style="position: absolute; right: 10vw; bottom: 7vw">开始分组</div>-->
     </div>
 
     <div class="main" id="mode1" style="display: none">
@@ -71,17 +153,18 @@
 <script src="./src/swiper.min.js"></script>
 <script src="./src/photo.js"></script>
 <script src="./src/index.js"></script>
+<script src="./src/circle.js"></script>
 
-    <script>;
+<script>;
         var AllPhotos = restirct.concat(photos);
 
-	    $('.screen-image').each(function () {
+	    $('.itemDot').each(function () {
 		    drawPhoto(this);
         });
 
 	    function drawPhoto(el) {
 		    var index = Math.floor(Math.random() * AllPhotos.length);
-		    if($('.screen-image[data-name="' + encodeURI(AllPhotos[index].name) +'"]').length > 0) {
+		    if($('.itemDot[data-name="' + encodeURI(AllPhotos[index].name) +'"]').length > 0) {
 			    drawPhoto(el);
 			    return
             }

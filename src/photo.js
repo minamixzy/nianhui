@@ -42,7 +42,7 @@ var photos = [{"name": "Alex Zhu", "path": "Alex Zhu.jpg"}, {
 	{"name": "Tina Cao", "path": "Tina.JPG"}, {"name": "Tony Xu", "path": "tony.jpg"}, {
 		"name": "Triste Zong",
 		"path": "triste.jpg"
-	}, {"name": "Tulip Chen", "path": "tulip.jpg"}, {"name": "Tusu", "path": "tusu.jpg"}, {
+	}, {"name": "Tulip Chen", "path": "tulip.jpg"}, {
 		"name": "Wendy Yang",
 		"path": "wendy.jpg"
 	}, {"name": "Yogi Chen", "path": "Yogi.jpg"}]

@@ -1,7 +1,7 @@
 $(function () {
 
 	//点击开始抽奖
-	$('#mode0 .button').on('click', function () {
+	$('#mode0 .contentCircle').on('click', function () {
 		$('.main').hide();
 		mode1();
 	});
